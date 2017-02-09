@@ -2,11 +2,11 @@
 addpath('../');
 
 % ! the movie will be downloaded from the internet !
-movieFile = '.avi';
-%urlwrite('http://dlaptev.org/other/RobustPCA_video_demo.avi', movieFile);
+movieFile = 'RobustPCA_video_input.avi';
+
 
 % open the movie
-n_frames = 15;
+n_frames = 20;
 movie = VideoReader(movieFile);
 frate = movie.FrameRate;    
 height = movie.Height;
