@@ -1,0 +1,55 @@
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Job Portal</title>
+
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js">
+ 
+</script>
+ 
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="./controller.js"></script>
+    <style type="text/css" src="style.css" ></style>
+  </head>
+
+  <body>
+ 
+            
+          <div ng-controller="AutoCompleteController" style="margin-top:50px;">
+            <div style="width:800px; margin:0 auto;">
+                
+            <hr>
+
+                <h2 class="text-center" style="color:#b3b3ff">Skill Reacommendation System</h2>
+            <hr>
+            <form ng-submit="addCtrl()">
+                
+              <div class="form-group">
+                <div class="inner-addon right-addon">  
+
+                  <input type="text" ng-model="search.job" placeholder="Enter Career Goal...." typeahead="item for item in items | filter:$viewValue | limitTo:8" class="form-control" >
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+                </div>
+            </form>
+            <h3 class="text-center" style="color:#9999ff">Top Reacommendated Skill for Above Position</h3>
+            <hr>
+            <div class="pre-scrollable">
+            <ul class="list-inline" ng-repeat="skill in skills">
+            <li>{{skill}}</li>
+            </ul>
+            </div>
+        </div>
+        </div>
+  
+</div>
+</body>
+</html>

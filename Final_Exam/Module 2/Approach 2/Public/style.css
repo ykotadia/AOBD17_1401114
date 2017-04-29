@@ -1,0 +1,40 @@
+.inner-addon {
+
+  position: relative;
+
+}
+.inner-addon .glyphicon {
+
+  position: absolute;
+
+  padding: 10px;
+
+  pointer-events: none;
+
+}
+.left-addon .glyphicon  { left:  0px;}
+
+.right-addon .glyphicon { right: 0px;
+
+background-color:33ceff; }
+
+
+.left-addon input  { padding-left:  30px; }
+
+.right-addon input { padding-right: 30px; }
+
+body {
+
+  margin: 10px;
+
+}           
+.input-group.input-group-unstyled input.form-control {
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+.input-group-unstyled .input-group-addon {
+    border-radius: 4px;
+    border: 0px;
+    background-color: transparent;
+}
